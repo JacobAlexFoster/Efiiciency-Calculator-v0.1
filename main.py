@@ -35,4 +35,14 @@ elif x == "EFF" and y == "TP":
 elif x == "EFF" and y == "UE":
     EFF = float(input("Efficiency (%): "))
     UE = float(input("Useful Energy Output (J): "))
+    TE = UE / (EFF / 100)
+    print(f"Total Energy Input: {TE:.2f} Joules")
+
+elif x == "EFF" and y == "UP":
+    EFF = float(input("Efficiency (%): "))
+    UP = float(input("Useful Power Output (W): "))
+    TP = UP / (EFF / 100)
+    print(f"Total Power Input: {TP:.2f} Watts")
+
+else:
     print("Invalid input. Please enter EFF, UE, TE, UP, or TP.")
